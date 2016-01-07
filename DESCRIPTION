@@ -1,0 +1,11 @@
+Package: RNAngs
+Type: Package
+Title: Functions for TGIRT-seq
+Version: 0.1
+Date: 2016-01-07
+Author: Douglas Wu
+Maintainer: Douglas Wu <wckdouglas@gmail.com>
+Description: This package contains some useful functions for RNA-seq/TGIRT-seq
+License: GPL-2
+Depends: R (>= 3.2.2)
+LazyData: TRUE
