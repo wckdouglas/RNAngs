@@ -8,16 +8,14 @@
 #'
 #' @keywords keywords
 #'
-#'
-ncRNA=c("sense_intronic","3prime_overlapping_ncrna",'processed_transcript',
-    'sense_overlapping','Other_lncRNA')
-smncRNA=c('misc_RNA','snRNA','piRNA')
-large_rRNA=c('28S_rRNA','18S_rRNA')
-small_rRNA=c('rRNA','5S_rRNA','58S_rRNA','5.8S_rRNA')
-protein_coding = c('protein_coding','TR','IG')
-
 #' @export
 groupGeneType <- function(x){
+    ncRNA=c("sense_intronic","3prime_overlapping_ncrna",'processed_transcript',
+            'sense_overlapping','Other_lncRNA')
+    smncRNA=c('misc_RNA','snRNA','piRNA')
+    large_rRNA=c('28S_rRNA','18S_rRNA')
+    small_rRNA=c('rRNA','5S_rRNA','58S_rRNA','5.8S_rRNA')
+    protein_coding = c('protein_coding','TR','IG')
     ifelse (x %in% ncRNA, 'Other ncRNA',
            ifelse (grepl('TR',x), 'TR',
                   ifelse (grepl('IG',x), 'IG',
